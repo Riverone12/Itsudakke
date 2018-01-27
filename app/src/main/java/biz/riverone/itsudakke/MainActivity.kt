@@ -30,7 +30,8 @@ import java.util.*
  * Itsudakke: いつだっけ？
  * Copyright(C) 2018 J.Kawahara
  * 2018.1.16 J.Kawahara 新規作成
- * 2018.1.17 v.1.00 J.Kawahara 初版公開
+ * 2018.1.17 J.Kawahara v.1.00 初版公開
+ * 2018.1.27 J.Kawahara v.1.01 履歴アクティビティの戻るボタンを削除
  */
 
 class MainActivity : AppCompatActivity() {

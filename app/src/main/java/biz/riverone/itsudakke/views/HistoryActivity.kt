@@ -16,6 +16,7 @@ import com.google.android.gms.ads.MobileAds
 /**
  * HistoryActivity.kt: 履歴を表示するアクティビティ
  * Copyriht (C) 2018 J.Kawahara
+ * 2018.1.27 J.Kawahara 戻るボタンを削除
  */
 
 class HistoryActivity : AppCompatActivity() {
@@ -64,12 +65,6 @@ class HistoryActivity : AppCompatActivity() {
         val pageCount = pagerAdapter.count
         if (pageCount > 0) {
             pager.currentItem = pageCount -1
-        }
-
-        // 戻るボタンの準備
-        val buttonBack = findViewById<Button>(R.id.buttonBack)
-        buttonBack.setOnClickListener {
-            finish()
         }
 
         // AdMob

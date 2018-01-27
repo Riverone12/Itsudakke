@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">いつだっけ？</string>
+
+    <!---->
+    <string name="banner_ad_unit_id">ca-app-pub-1882812461462801/3847275123</string>
+    <!---->
+    <!-- Test
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    -->
+
+    <string name="captionRegistration">登録</string>
+    <string name="captionOk">OK</string>
+    <string name="captionCancel">キャンセル</string>
+    <string name="captionBack">戻る</string>
+
+    <!-- Main -->
+    <string name="buttonSetting">設定</string>
+    <string name="buttonInput">入力</string>
+
+    <!-- 支出額入力ダイアログ -->
+    <string name="empty" />
+    <string name="dialogPostTitle">の「できた！」入力</string>
+    <string name="labelDate">日付</string>
+    <string name="labelMemo">備考</string>
+    <string name="captionErase">この「できた！」を削除する</string>
+
+    <string name="confirmEraseTitle">削除の確認</string>
+    <string name="confirmErase">この「できた！」データを削除します。よろしいですか？</string>
+
+    <!-- 履歴表示画面 -->
+    <string name="listLabelDate">日付</string>
+    <string name="listLabelMemo">備考</string>
+    <string name="infoNoData">「できた！」データがありません。</string>
+
+    <!-- 設定メニュー -->
+    <string name="menuReset">リセット（全データ削除）</string>
+    <string name="settingMenuTask">タスクの設定</string>
+
+    <!-- 科目選択ダイアログ -->
+    <string name="selectTaskDialogTitle">編集するタスクを選んでください</string>
+
+    <!-- 科目設定ダイアログ -->
+    <string name="labelTaskName">名称</string>
+
+    <!-- リセット確認ダイアログ -->
+    <string name="title_reset_dialog">『いつだっけ？』のリセット</string>
+    <string name="summary_reset">このアプリのすべてのデータを削除します。実行すると元に戻すことはできません。\n</string>
+    <string name="caption_reset_check">リセットを実行します</string>
+    <string name="reset_message">このアプリのデータをリセットしました。</string>
+</resources>

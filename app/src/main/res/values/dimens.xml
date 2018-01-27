@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialogPadding">8dp</dimen>
+
+    <dimen name="textSizeTitle">20sp</dimen>
+    <dimen name="textSizeXLarge">32sp</dimen>
+    <dimen name="textSizeLarge">24sp</dimen>
+    <dimen name="textSizeMiddle">18sp</dimen>
+
+    <dimen name="dialogItemMargin">12dp</dimen>
+    <dimen name="controllerPadding">4dp</dimen>
+    <dimen name="labelRightMargin">8dp</dimen>
+
+    <dimen name="bottom_space">12dp</dimen>
+    <dimen name="padding_pager">8dp</dimen>
+</resources>

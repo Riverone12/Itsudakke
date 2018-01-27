@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dialogPadding">
+
+    <TextView
+        android:id="@+id/textViewSettingTaskTitle"
+        android:textSize="@dimen/textSizeTitle"
+        android:layout_marginBottom="@dimen/dialogItemMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dialogItemMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/labelTaskName"
+            android:textSize="@dimen/textSizeMiddle"
+            android:layout_marginEnd="@dimen/labelRightMargin"
+            android:layout_marginRight="@dimen/labelRightMargin"
+            android:gravity="end"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editTextTaskName"
+            android:textSize="@dimen/textSizeMiddle"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:background="@drawable/border"
+            android:padding="@dimen/controllerPadding"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

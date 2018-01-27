@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/controllerPadding"
+    android:paddingBottom="@dimen/controllerPadding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:textSize="@dimen/textSizeMiddle"
+        android:paddingStart="@dimen/controllerPadding"
+        android:paddingLeft="@dimen/controllerPadding"
+        android:paddingEnd="@dimen/controllerPadding"
+        android:paddingRight="@dimen/controllerPadding"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textViewMemo"
+        android:textSize="@dimen/textSizeMiddle"
+        android:paddingStart="@dimen/controllerPadding"
+        android:paddingLeft="@dimen/controllerPadding"
+        android:paddingEnd="@dimen/controllerPadding"
+        android:paddingRight="@dimen/controllerPadding"
+        android:layout_weight="7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

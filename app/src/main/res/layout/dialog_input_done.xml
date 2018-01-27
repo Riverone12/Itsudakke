@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dialogPadding">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:textSize="@dimen/textSizeTitle"
+        android:layout_marginBottom="@dimen/dialogItemMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dialogItemMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/labelDate"
+            android:textSize="@dimen/textSizeMiddle"
+            android:layout_marginEnd="@dimen/labelRightMargin"
+            android:layout_marginRight="@dimen/labelRightMargin"
+            android:gravity="end"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewTradeDate"
+                android:textSize="@dimen/textSizeMiddle"
+                android:padding="@dimen/controllerPadding"
+                android:background="@drawable/border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dialogItemMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/labelMemo"
+            android:textSize="@dimen/textSizeMiddle"
+            android:layout_marginEnd="@dimen/labelRightMargin"
+            android:layout_marginRight="@dimen/labelRightMargin"
+            android:gravity="end"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/editTextMemo"
+            android:gravity="top"
+            android:minLines="2"
+            android:maxLines="4"
+            android:maxLength="200"
+            android:background="@drawable/border"
+            android:padding="@dimen/controllerPadding"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/eraseController"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/dialogItemMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v4.widget.Space
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <FrameLayout
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/buttonErase"
+                android:text="@string/captionErase"
+                android:padding="@dimen/controllerPadding"
+                android:background="@drawable/border_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+INSERT INTO task_item(id, title, color) VALUES(1, '部屋そうじ', 0)
+INSERT INTO task_item(id, title, color) VALUES(2, '水回りそうじ', 1)
+INSERT INTO task_item(id, title, color) VALUES(3, 'コンタクトレンズ交換', 2)
+INSERT INTO task_item(id, title, color) VALUES(4, 'お菓子の買い込み', 3)
+INSERT INTO task_item(id, title, color) VALUES(5, '通帳記入', 4)

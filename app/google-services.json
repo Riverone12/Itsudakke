@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "861552058787",
+    "firebase_url": "https://tsumoribank.firebaseio.com",
+    "project_id": "tsumoribank",
+    "storage_bucket": "tsumoribank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861552058787:android:b3e4a5c7b16116e5",
+        "android_client_info": {
+          "package_name": "biz.riverone.tsumorikinshu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861552058787-sb3580rkke9qc1it43vmde6qqghau8s0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAKg25NVvwkOQx-9IdUpFb61C6rE4tDnw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861552058787:android:20235aafd16c6a73",
+        "android_client_info": {
+          "package_name": "biz.riverone.tsumorikinen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861552058787-sb3580rkke9qc1it43vmde6qqghau8s0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAKg25NVvwkOQx-9IdUpFb61C6rE4tDnw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861552058787:android:8522911c0f7bb2d4",
+        "android_client_info": {
+          "package_name": "biz.riverone.ohzappa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861552058787-sb3580rkke9qc1it43vmde6qqghau8s0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAKg25NVvwkOQx-9IdUpFb61C6rE4tDnw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861552058787:android:49bcad6712e40c9f",
+        "android_client_info": {
+          "package_name": "biz.riverone.itsudakke"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "861552058787-sb3580rkke9qc1it43vmde6qqghau8s0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAKg25NVvwkOQx-9IdUpFb61C6rE4tDnw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

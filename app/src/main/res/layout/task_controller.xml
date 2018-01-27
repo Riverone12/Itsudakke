@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="@dimen/dialogPadding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/calcViewer"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginEnd="@dimen/controllerPadding"
+        android:layout_marginRight="@dimen/controllerPadding"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textViewTaskName"
+                android:gravity="start"
+                android:textSize="@dimen/textSizeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textViewLastDate"
+                    android:gravity="end"
+                    android:textSize="@dimen/textSizeLarge"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/textViewElapsed"
+                    android:gravity="end"
+                    android:textSize="@dimen/textSizeLarge"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:src="@drawable/ripple_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+    <Button
+        android:id="@+id/buttonInput"
+        android:text="@string/buttonInput"
+        android:background="@drawable/border_button"
+        android:drawableTop="@drawable/ic_action_edit"
+        android:padding="@dimen/controllerPadding"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

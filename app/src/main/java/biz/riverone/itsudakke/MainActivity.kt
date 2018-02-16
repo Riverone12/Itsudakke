@@ -32,6 +32,7 @@ import java.util.*
  * 2018.1.16 J.Kawahara 新規作成
  * 2018.1.17 J.Kawahara v.1.00 初版公開
  * 2018.1.27 J.Kawahara v.1.01 履歴アクティビティの戻るボタンを削除
+ * 2018.2.16 J.Kawahara v.1.02 丸型アイコンを更新
  */
 
 class MainActivity : AppCompatActivity() {

@@ -28,6 +28,8 @@
     <string name="confirmErase">この「できた！」データを削除します。よろしいですか？</string>
 
     <!-- 履歴表示画面 -->
+    <string name="caption_to_list">一覧表示へ</string>
+    <string name="caption_to_calendar">カレンダー表示へ</string>
     <string name="listLabelDate">日付</string>
     <string name="listLabelMemo">備考</string>
     <string name="infoNoData">「できた！」データがありません。</string>
@@ -47,4 +49,5 @@
     <string name="summary_reset">このアプリのすべてのデータを削除します。実行すると元に戻すことはできません。\n</string>
     <string name="caption_reset_check">リセットを実行します</string>
     <string name="reset_message">このアプリのデータをリセットしました。</string>
+
 </resources>

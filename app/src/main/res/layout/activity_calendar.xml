@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/historyOuterLayout"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="biz.riverone.itsudakke.views.HistoryActivity">
+    tools:context="biz.riverone.itsudakke.views.CalendarActivity">
 
     <FrameLayout
-        android:id="@+id/linkToCalendar"
+        android:id="@+id/linkToList"
         android:background="@color/chart_border"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,13 +19,17 @@
             android:padding="@dimen/padding_pager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <Space
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
             <TextView
                 android:background="?android:attr/selectableItemBackground"
-                android:text="@string/caption_to_calendar"
+                android:text="@string/caption_to_list"
                 android:textSize="@dimen/textSizeSmall"
                 android:gravity="end|center_vertical"
-                android:drawableStart="@drawable/ic_action_previous_item"
-                android:drawableLeft="@drawable/ic_action_previous_item"
+                android:drawableEnd="@drawable/ic_action_next_item"
+                android:drawableRight="@drawable/ic_action_next_item"
                 android:drawablePadding="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -43,8 +46,8 @@
             android:paddingTop="@dimen/dialogPadding"
             android:paddingBottom="@dimen/dialogPadding"
             android:background="#666"
-            android:textColor="#ccc"
             android:textSize="@dimen/textSizeMiddle"
+            android:textColor="#ccc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </android.support.v4.view.ViewPager>
@@ -53,7 +56,7 @@
         android:background="#666"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-       <com.google.android.gms.ads.AdView
+        <com.google.android.gms.ads.AdView
             xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
             android:layout_gravity="center"

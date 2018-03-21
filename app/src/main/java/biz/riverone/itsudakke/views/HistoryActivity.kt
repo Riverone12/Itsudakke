@@ -1,11 +1,12 @@
 package biz.riverone.itsudakke.views
 
+import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.view.View
-import android.widget.Button
+import android.widget.FrameLayout
 import biz.riverone.itsudakke.R
 import biz.riverone.itsudakke.common.ApplicationControl
 import biz.riverone.itsudakke.models.TaskItem
@@ -27,9 +28,14 @@ class HistoryActivity : AppCompatActivity() {
     }
 
     private val pager: ViewPager by lazy { findViewById<ViewPager>(R.id.pager) }
-    private lateinit var pagerAdapter: MyFragmentPagerAdapter
+    private lateinit var pagerAdapter: HistoryPagerAdapter
     private lateinit var mAdView : AdView
 
+    // 画面遷移時のアニメーション関連
+    private var closeEnterAnimationId = 0
+    private var closeExitAnimationId = 0
+
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
@@ -37,6 +43,18 @@ class HistoryActivity : AppCompatActivity() {
         // 画面をポートレートに固定する
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
+        // 画面を閉じた時のアニメーション用の処理
+        val typedArray = theme.obtainStyledAttributes(intArrayOf(android.R.attr.windowAnimationStyle))
+        val windowAnimationStyleResId = typedArray.getResourceId(0, 0)
+
+        val attr = intArrayOf(
+                android.R.attr.activityCloseEnterAnimation,
+                android.R.attr.activityCloseExitAnimation)
+        val activityStyle = theme.obtainStyledAttributes(windowAnimationStyleResId, attr)
+        closeEnterAnimationId = activityStyle.getResourceId(0, 0)
+        closeExitAnimationId = activityStyle.getResourceId(1, 0)
+
+        // パラメータを取得する
         val taskItem = if (intent.hasExtra(EXTRA_KEY_TASK_ITEM)) {
             intent.getParcelableExtra(EXTRA_KEY_TASK_ITEM)
         } else {
@@ -46,11 +64,17 @@ class HistoryActivity : AppCompatActivity() {
         // タイトルを設定する
         title = taskItem.title
 
+        // カレンダー表示へのリンクの準備
+        val linkToCalendar = findViewById<FrameLayout>(R.id.linkToCalendar)
+        linkToCalendar.setOnClickListener {
+            finish()
+        }
+
         // データがある月からのみ表示する
         val minYmd = TaskItem.minimamDoneDate(ApplicationControl.database, taskItem.id)
 
         // ページャーの準備
-        pagerAdapter = MyFragmentPagerAdapter(this.supportFragmentManager)
+        pagerAdapter = HistoryPagerAdapter(this.supportFragmentManager)
         pager.adapter = pagerAdapter
         pagerAdapter.initialize(taskItem, MAX_MONTHS, minYmd)
 
@@ -72,5 +96,10 @@ class HistoryActivity : AppCompatActivity() {
         mAdView = findViewById(R.id.adView)
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(closeEnterAnimationId, closeExitAnimationId)
     }
 }

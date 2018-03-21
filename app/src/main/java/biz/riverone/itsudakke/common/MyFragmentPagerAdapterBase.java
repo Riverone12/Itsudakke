@@ -27,7 +27,7 @@ public abstract class MyFragmentPagerAdapterBase<T> extends MyPagerAdapterBase<T
     }
 
     /*
-    public MyFragmentPagerAdapterBase(FragmentManager fm, T... items) {
+    public TaskPagerAdapterBase(FragmentManager fm, T... items) {
         super(items);
         fragmentManager = fm;
     }

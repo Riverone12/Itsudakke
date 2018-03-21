@@ -1,6 +1,5 @@
 package biz.riverone.itsudakke.views
 
-
 import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
@@ -13,16 +12,15 @@ import android.widget.ListView
 import android.widget.TextView
 import biz.riverone.itsudakke.R
 import biz.riverone.itsudakke.common.ApplicationControl
-import biz.riverone.itsudakke.common.MyCalendarUtil
 import biz.riverone.itsudakke.dialog.InputDoneDialog
 import biz.riverone.itsudakke.models.DoneItem
 import biz.riverone.itsudakke.models.DoneItemList
 import biz.riverone.itsudakke.models.TaskItem
 
-
 /**
  * HistoryFragment.kt: 科目別の実績履歴表示用フラグメント
  * Copyright (C) 2018 J.Kawahara
+ * 2018.3.21 J.Kawahara ソースコードの微修正
  */
 class HistoryFragment : Fragment() {
 
@@ -48,9 +46,9 @@ class HistoryFragment : Fragment() {
     private var targetYear: Int = 0
     private var targetMonth: Int = 0
 
-    var textViewTotal: TextView? = null
-    var listView: ListView? = null
-    var textViewNoData: TextView? = null
+    private var textViewTotal: TextView? = null
+    private var listView: ListView? = null
+    private var textViewNoData: TextView? = null
 
     private var doneItemList = DoneItemList()
     private var listAdapter: HistoryListViewAdapter? = null
@@ -107,7 +105,7 @@ class HistoryFragment : Fragment() {
     }
 
     private fun reload() {
-        // 対象期間の支払いデータを取得する
+        // 対象期間の「できた！」データを取得する
         doneItemList.load(ApplicationControl.database, taskItem!!, targetYear, targetMonth)
 
         // 対象月度の合計回数
@@ -155,9 +153,7 @@ class HistoryFragment : Fragment() {
                 // 再表示
                 reload()
             }
-
         }
     }
-
 }
 

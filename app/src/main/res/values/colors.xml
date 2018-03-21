@@ -12,4 +12,8 @@
 
     <color name="list_odd">#ffffff</color>
     <color name="list_even">#fffacd</color>
+
+    <color name="colorLightGray">#eeeeee</color>
+    <color name="colorSilverGray">#dddddd</color>
+    <color name="colorWhite">#ffffff</color>
 </resources>

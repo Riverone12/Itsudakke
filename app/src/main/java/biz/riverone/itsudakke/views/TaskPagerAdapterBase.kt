@@ -5,16 +5,17 @@ import android.support.v4.app.FragmentManager
 import biz.riverone.itsudakke.common.MyCalendarUtil
 import biz.riverone.itsudakke.common.MyFragmentPagerAdapterBase
 import biz.riverone.itsudakke.models.TaskItem
-import java.util.*
+import java.util.ArrayList
 
 /**
- * MyFragmentPagerAdapter.kt: スワイプでページを切り替える仕組み
- * Created by kawahara on 2018/01/08.
+ * TaskPagerAdapterBase.kt: スワイプでページを切り替える仕組み
+ * Created by kawahara on 2018/03/21.
  */
-class MyFragmentPagerAdapter(fragmentManager: FragmentManager)
-    : MyFragmentPagerAdapterBase<String>(fragmentManager) {
-
+abstract class TaskPagerAdapterBase(fragmentManager: FragmentManager)
+    : MyFragmentPagerAdapterBase<String>(fragmentManager){
     private val fragmentList = ArrayList<Fragment>()
+
+    abstract fun createFragment(accountItem: TaskItem, year: Int, month: Int): Fragment
 
     fun initialize(accountItem: TaskItem, monthsCount: Int, minYmd: Int) {
 
@@ -55,9 +56,11 @@ class MyFragmentPagerAdapter(fragmentManager: FragmentManager)
                 // 今月度とその1月前は必ず表示する
                 // 2か月以上前はデータが存在する場合に限り表示する
             } else {
-                val fragment = HistoryFragment.create(accountItem, year, month)
+                val fragment = createFragment(accountItem, year, month)
                 fragmentList.add(fragment)
-                add(fragment.title)
+
+                val title = year.toString() + "年" + month.toString() + "月"
+                add(title)
             }
             month += 1
             if (month > 12) {
@@ -81,5 +84,4 @@ class MyFragmentPagerAdapter(fragmentManager: FragmentManager)
     override fun getPageTitle(position: Int): CharSequence {
         return getItem(position)
     }
-
 }

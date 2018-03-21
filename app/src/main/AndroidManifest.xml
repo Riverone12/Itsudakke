@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.HistoryActivity"></activity>
+        <activity android:name=".views.HistoryActivity"
+            android:theme="@style/AnimatedTheme"/>
+        <activity android:name=".views.CalendarActivity" />
     </application>
 
 </manifest>

@@ -2,8 +2,8 @@ package biz.riverone.itsudakke
 
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -20,7 +20,7 @@ import biz.riverone.itsudakke.models.DoneItem
 import biz.riverone.itsudakke.models.DoneItemList
 import biz.riverone.itsudakke.models.TaskItem
 import biz.riverone.itsudakke.models.TaskItemList
-import biz.riverone.itsudakke.views.HistoryActivity
+import biz.riverone.itsudakke.views.CalendarActivity
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
@@ -33,6 +33,8 @@ import java.util.*
  * 2018.1.17 J.Kawahara v.1.00 初版公開
  * 2018.1.27 J.Kawahara v.1.01 履歴アクティビティの戻るボタンを削除
  * 2018.2.16 J.Kawahara v.1.02 丸型アイコンを更新
+ * 2018.3.21 J.Kawahara v.1.03 カレンダー表示機能を追加
+ *           J.Kawahara v.1.04 カレンダー画面のマージンを微調整
  */
 
 class MainActivity : AppCompatActivity() {
@@ -162,8 +164,8 @@ class MainActivity : AppCompatActivity() {
             val taskId = sender.tag as Int
             val taskItem = taskItemList.find(taskId) ?: TaskItem()
             if (taskItem.id > 0) {
-                val sendIntent = Intent(this, HistoryActivity::class.java)
-                sendIntent.putExtra(HistoryActivity.EXTRA_KEY_TASK_ITEM, taskItem)
+                val sendIntent = Intent(this, CalendarActivity::class.java)
+                sendIntent.putExtra(CalendarActivity.EXTRA_KEY_TASK_ITEM, taskItem)
                 startActivity(sendIntent)
             }
         }
